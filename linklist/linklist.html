@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drag and Drop Train Carriages</title>
+    <style>
+       #toolbar {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    text-align: center; /* Center text horizontally */
+}
+
+#toolbar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #45a049; /* Darker green background color */
+    border: none;
+    color: white; /* White text color */
+    border-radius: 5px;
+}
+
+#toolbar button:hover {
+    background-color: #4CAF50; /* Green background color on hover */
+}
+
+        
+        .carriage {
+            display: inline-block;
+            margin: 5px;
+            padding: 17px;
+            border: 4px solid #000000;
+            background-color: #c0a5a5;
+            cursor: move;
+        }
+        #train {
+            
+            margin: 20px;
+            padding: 100px;
+            border: 1px solid #000000;
+            min-height: 100px;
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<div id="toolbar">
+    <button onclick="addCarriage()">เพิ่มบอย</button>
+</div>
+<div id="train">
+    <!-- Carriage at the Beginning -->
+    <div class="carriage" draggable="true" ondragstart="dragStart(event)">
+        <img src="1.png" alt="Carriage Image 1">
+    </div>
+
+    <!-- Carriage in the Middle -->
+    <div class="carriage" draggable="true" ondragstart="dragStart(event)">
+        <img src="2.png" alt="Carriage Image 2">
+    </div>
+
+    <!-- Carriage at the End -->
+    <div class="carriage" draggable="true" ondragstart="dragStart(event)">
+        <img src="3.png" alt="Carriage Image 3">
+    </div>
+</div>
+
+<script src="dragdrop.js"></script>
+</body>
+</html>
